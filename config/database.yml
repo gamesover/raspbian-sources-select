@@ -11,6 +11,10 @@ test:
   <<: *default
   database: raspbian_sources_select_test
 
+staging:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+
 production:
   <<: *default
-  database: raspbian_sources_select_production
+  url: <%= ENV['DATABASE_URL'] %>
