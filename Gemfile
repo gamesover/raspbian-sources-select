@@ -32,8 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :test do
   gem 'rspec-rails', '~> 3.7'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
