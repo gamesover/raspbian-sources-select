@@ -28,12 +28,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'puma'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'rubocop', '~> 0.54.0', require: false
 
 group :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'rspec_junit_formatter'
+  gem 'rubocop-rspec'
 end
 
 group :development do

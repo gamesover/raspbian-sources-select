@@ -41,6 +41,10 @@ jobs:
           paths:
             - vendor/bundle
 
+      - run:
+          name: rubocop 
+          command: bundle exec rubocop
+
       # Only necessary if app uses webpacker or yarn in some other way
 #      - restore_cache:
 #          keys:
