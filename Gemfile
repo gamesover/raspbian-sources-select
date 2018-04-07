@@ -28,7 +28,10 @@ gem 'foreman'
 
 gem 'puma'
 
-gem 'rubocop', '~> 0.54.0', require: false
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'rubocop', '~> 0.54.0', require: false
+end
 
 group :test do
   gem 'rspec-rails', '~> 3.7'
