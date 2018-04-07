@@ -16,7 +16,7 @@ jobs:
         environment:
           POSTGRES_USER: raspbian-sources-select
           POSTGRES_DB: raspbian_sources_select_circleci
-          POSTGRES_PASSWORD: $raspbian_sources_select_postgre_passwd
+          POSTGRES_PASSWORD: ${raspbian_sources_select_postgre_passwd}
     steps:
       - checkout
 
@@ -42,28 +42,28 @@ jobs:
             - vendor/bundle
 
       # Only necessary if app uses webpacker or yarn in some other way
-      - restore_cache:
-          keys:
-            - rails-demo-yarn-{{ checksum "yarn.lock" }}
-            - rails-demo-yarn-
+#      - restore_cache:
+#          keys:
+#            - rails-demo-yarn-{{ checksum "yarn.lock" }}
+#            - rails-demo-yarn-
+#
+#      - run:
+#          name: Yarn Install
+#          command: yarn install --cache-folder ~/.cache/yarn
+#
+#      # Store yarn / webpacker cache
+#      - save_cache:
+#          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
+#          paths:
+#            - ~/.cache/yarn
 
-      - run:
-          name: Yarn Install
-          command: yarn install --cache-folder ~/.cache/yarn
-
-      # Store yarn / webpacker cache
-      - save_cache:
-          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-
-      - run:
-          name: Wait for DB
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
-
-      - run:
-          name: Database setup
-          command: bin/rails db:schema:load --trace
+#      - run:
+#          name: Wait for DB
+#          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+#
+#      - run:
+#          name: Database setup
+#          command: bin/rails db:schema:load --trace
 
       # Run rspec in parallel
       - type: shell
