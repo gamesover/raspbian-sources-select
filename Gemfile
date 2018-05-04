@@ -20,5 +20,6 @@ end
 
 group :development do
   gem 'bullet'
+  gem 'pry-rails'
   gem 'spring'
 end
