@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20_180_408_180_735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'sources', force: :cascade do |t|
+    t.string   'continent',                  null: false
+    t.boolean  'ipv6', default: false, null: false
+    t.string   'country',                    null: false
+    t.string   'mirror',                     null: false
+    t.string   'address',                    null: false
+    t.text     'issues'
+    t.datetime 'created_at',                 null: false
+    t.datetime 'updated_at',                 null: false
+  end
 end
