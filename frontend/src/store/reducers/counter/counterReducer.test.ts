@@ -16,17 +16,17 @@ describe('Counter Reducer', () => {
 
   });
 
-  it('should add 3 when passed ADD action with 3 value', () => {
+  // it('should add 3 when passed ADD action with 3 value', () => {
 
-    // Given
-    const initialCounterState = 0;
-    const action = counterActions.add(3);
+  //   // Given
+  //   const initialCounterState = 0;
+  //   const action = counterActions.add(3);
 
-    // When
-    const newState = counterReducer(initialCounterState, action);
+  //   // When
+  //   const newState = counterReducer(initialCounterState, action);
 
-    // Then
-    expect(newState).toEqual(3);
+  //   // Then
+  //   expect(newState).toEqual(3);
 
-  });
+  // });
 });
