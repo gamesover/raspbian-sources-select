@@ -5,31 +5,19 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts-redux-ts": "1.2.1"
+    "react-scripts-ts": "2.16.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
+    "start": "PORT=8080 react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "create:component": "./node_modules/hygen/lib/bin.js component create",
-    "create:store:item": "./node_modules/hygen/lib/bin.js store create"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "@App/(.*)": "<rootDir>/src/$1"
-    }
+    "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/history": "^4.6.2",
     "@types/jest": "^22.2.3",
-    "@types/node": "^10.0.8",
+    "@types/node": "^10.1.2",
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
-    "@types/react-redux": "^6.0.0",
-    "@types/redux": "^3.6.0",
-    "@types/redux-thunk": "^2.1.0",
     "typescript": "^2.8.3"
   }
 }
